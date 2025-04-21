@@ -11,7 +11,15 @@ import {
 } from "./components/ui/card";
 import { Badge } from "./components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "./components/ui/tabs";
-import { Download, Github, Instagram, Linkedin, Mail } from "lucide-react";
+import {
+  Download,
+  Github,
+  Instagram,
+  Linkedin,
+  Mail,
+  Play,
+  Video,
+} from "lucide-react";
 import { AnimatedSection } from "./components/animated-section";
 
 export default function Portfolio() {
@@ -462,6 +470,159 @@ export default function Portfolio() {
           </div>
         </AnimatedSection>
 
+        <AnimatedSection id="education" className="py-20">
+          <div className="container mx-auto px-4">
+            <h2 className="text-4xl font-bold mb-4 text-center">
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-600">
+                Education
+              </span>
+            </h2>
+            <div className="w-16 h-1 bg-purple-500 mx-auto mb-16"></div>
+
+            <div className="relative">
+              {/* Timeline line */}
+              <div className="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 h-full w-1 bg-gradient-to-b from-purple-500 to-pink-600 hidden md:block"></div>
+
+              {/* University */}
+              <div className="relative mb-16 md:mb-24">
+                <div className="flex flex-col md:flex-row items-center">
+                  <div className="md:w-1/2 md:pr-12 md:text-right order-2 md:order-1">
+                    <div className="bg-zinc-900/80 border border-zinc-800 rounded-xl p-6 hover:border-purple-500/50 transition-all hover:-translate-y-1 hover:shadow-lg hover:shadow-purple-500/10">
+                      <h3 className="text-xl font-bold text-purple-400">
+                        Bachelor of Computer Science
+                      </h3>
+                      <p className="text-lg font-medium mt-1">
+                        Lovely Professional University
+                      </p>
+                      <p className="text-zinc-400 mt-2">2022 - 2026</p>
+                      <div className="mt-4">
+                        <Badge className="bg-purple-500/20 text-purple-300 hover:bg-purple-500/30">
+                          CGPA : 8.55
+                        </Badge>
+                      </div>
+                      <p className="mt-4 text-zinc-300">
+                        B.Tech Computer Science with a focus on software
+                        development and data structures.
+                      </p>
+                    </div>
+                  </div>
+                  <div className="md:w-1/2 flex justify-center md:justify-start order-1 md:order-2 mb-6 md:mb-0">
+                    <div className="w-10 h-10 rounded-full bg-purple-500 flex items-center justify-center relative z-10">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        className="lucide lucide-graduation-cap"
+                      >
+                        <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                        <path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* 12th Class */}
+              <div className="relative mb-16 md:mb-24">
+                <div className="flex flex-col md:flex-row items-center">
+                  <div className="md:w-1/2 flex justify-center md:justify-end order-1 mb-6 md:mb-0">
+                    <div className="w-10 h-10 rounded-full bg-purple-500 flex items-center justify-center relative z-10">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        className="lucide lucide-book-open"
+                      >
+                        <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+                        <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div className="md:w-1/2 md:pl-12 order-2">
+                    <div className="bg-zinc-900/80 border border-zinc-800 rounded-xl p-6 hover:border-purple-500/50 transition-all hover:-translate-y-1 hover:shadow-lg hover:shadow-purple-500/10">
+                      <h3 className="text-xl font-bold text-purple-400">
+                        Higher Secondary Education
+                      </h3>
+                      <p className="text-lg font-medium mt-1">
+                        Arya Model Sr. Sec. School
+                      </p>
+                      <p className="text-zinc-400 mt-2">2021 - 2022</p>
+                      <div className="mt-4">
+                        <Badge className="bg-purple-500/20 text-purple-300 hover:bg-purple-500/30">
+                          Grade: 94.6%
+                        </Badge>
+                      </div>
+                      <p className="mt-4 text-zinc-300">
+                        Science stream with Computer Science.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* 10th Class */}
+              <div className="relative">
+                <div className="flex flex-col md:flex-row items-center">
+                  <div className="md:w-1/2 md:pr-12 md:text-right order-2 md:order-1">
+                    <div className="bg-zinc-900/80 border border-zinc-800 rounded-xl p-6 hover:border-purple-500/50 transition-all hover:-translate-y-1 hover:shadow-lg hover:shadow-purple-500/10">
+                      <h3 className="text-xl font-bold text-purple-400">
+                        Secondary Education
+                      </h3>
+                      <p className="text-lg font-medium mt-1">
+                        Arya Model Sr. Sec. School
+                      </p>
+                      <p className="text-zinc-400 mt-2">2019 - 2020</p>
+                      <div className="mt-4">
+                        <Badge className="bg-purple-500/20 text-purple-300 hover:bg-purple-500/30">
+                          Grade: 96%
+                        </Badge>
+                      </div>
+                      <p className="mt-4 text-zinc-300">
+                        achieving a perfect score in all subjects
+                      </p>
+                    </div>
+                  </div>
+                  <div className="md:w-1/2 flex justify-center md:justify-start order-1 md:order-2 mb-6 md:mb-0">
+                    <div className="w-10 h-10 rounded-full bg-purple-500 flex items-center justify-center relative z-10">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        className="lucide lucide-school"
+                      >
+                        <path d="m4 6 8-4 8 4" />
+                        <path d="m18 10 4 2v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-8l4-2" />
+                        <path d="M14 22v-4a2 2 0 0 0-4 0v4" />
+                        <path d="M18 5v17" />
+                        <path d="M6 5v17" />
+                        <circle cx="12" cy="9" r="2" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </AnimatedSection>
+
         {/* Projects Section */}
         <AnimatedSection id="projects" className="py-20">
           <div className="container mx-auto px-4">
@@ -629,6 +790,71 @@ export default function Portfolio() {
                 ]}
                 delay={0}
               />
+            </div>
+          </div>
+        </AnimatedSection>
+        <AnimatedSection id="video" className="py-20">
+          <div className="container mx-auto px-4">
+            <h2 className="text-4xl font-bold mb-4 text-center">
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-600">
+                Video CV
+              </span>
+            </h2>
+            <div className="w-16 h-1 bg-purple-500 mx-auto mb-16"></div>
+
+            <div className="max-w-3xl mx-auto">
+              <div className="bg-zinc-900/80 border border-zinc-800 rounded-xl p-6 hover:border-purple-500/50 transition-all">
+                <div className="relative aspect-video rounded-lg overflow-hidden mb-6 group">
+                  <img
+                    src="/placeholder.svg?height=720&width=1280"
+                    alt="Video CV Thumbnail"
+                    width={1280}
+                    height={720}
+                    className="object-cover w-full"
+                  />
+                  <div className="absolute inset-0 bg-black/50 flex items-center justify-center group-hover:bg-black/70 transition-all">
+                    <div className="w-20 h-20 rounded-full bg-purple-500/80 flex items-center justify-center">
+                      <Play />
+                    </div>
+                  </div>
+                </div>
+
+                <h3 className="text-xl font-bold mb-4">
+                  Watch My Video Introduction
+                </h3>
+                <p className="text-zinc-300 mb-6">
+                  Get to know me better through this short video where I talk
+                  about my skills, experience, and what drives me as a
+                  developer. I also showcase some of my favorite projects and
+                  discuss my approach to problem-solving.
+                </p>
+
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Button
+                    asChild
+                    className="bg-purple-600 hover:bg-purple-700 flex-1"
+                  >
+                    <a
+                      href="https://drive.google.com/file/d/1ob6Ms44_66L_QQ_Hxglio1APn-MJi9oZ/view?usp=sharing"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Video className="mr-2 h-4 w-4" />
+                      Watch on Google Drive
+                    </a>
+                  </Button>
+                  <Button asChild variant="outline" className="flex-1">
+                    <a
+                      href="https://drive.usercontent.google.com/download?id=1ob6Ms44_66L_QQ_Hxglio1APn-MJi9oZ&export=download&authuser=0"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Download className="mr-2 h-4 w-4" />
+                      Download Video
+                    </a>
+                  </Button>
+                </div>
+              </div>
             </div>
           </div>
         </AnimatedSection>
