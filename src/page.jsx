@@ -190,108 +190,275 @@ export default function Portfolio() {
         </AnimatedSection>
 
         {/* Skills Section */}
-        <AnimatedSection id="skills" className="py-20 bg-zinc-900/50">
+        <AnimatedSection id="skills" className="py-20 bg-zinc-900">
           <div className="container mx-auto px-4">
-            <h2 className="text-4xl font-bold mb-16 text-center">
+            <h2 className="text-4xl font-bold mb-4 text-center">
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-600">
-                Skills & Tools
+                Skills & Tech Stack
               </span>
             </h2>
+            <div className="w-16 h-1 bg-purple-500 mx-auto mb-16"></div>
 
-            <Tabs defaultValue="programming" className="w-full">
-              <TabsList className="grid grid-cols-5 mb-10 bg-zinc-800/50">
-                <TabsTrigger value="programming">Programming</TabsTrigger>
-                <TabsTrigger value="frontend">Frontend</TabsTrigger>
-                <TabsTrigger value="backend">Backend</TabsTrigger>
-                <TabsTrigger value="database">Database</TabsTrigger>
-                <TabsTrigger value="cloud">Cloud</TabsTrigger>
-              </TabsList>
-
-              <TabsContent value="programming" className="mt-6">
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {/* Frontend */}
+              <div className="bg-zinc-900/80 border border-zinc-800 rounded-xl p-6 hover:border-purple-500/50 transition-all">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="text-purple-400 p-2 bg-purple-400/10 rounded-lg">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="lucide lucide-globe"
+                    >
+                      <circle cx="12" cy="12" r="10" />
+                      <line x1="2" x2="22" y1="12" y2="12" />
+                      <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                    </svg>
+                  </div>
+                  <h3 className="text-xl font-semibold">Frontend</h3>
+                </div>
+                <div className="flex flex-wrap gap-2">
                   {[
+                    "HTML",
+                    "CSS",
                     "JavaScript",
                     "TypeScript",
-                    "Python",
-                    "Java",
-                    "C++",
-                    "C",
-                    "Go",
-                    "Kotlin",
-                  ].map((skill, index) => (
-                    <SkillCard key={skill} name={skill} delay={index * 100} />
-                  ))}
-                </div>
-              </TabsContent>
-
-              <TabsContent value="frontend" className="mt-6">
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-                  {[
-                    "React",
+                    "React.js",
                     "Next.js",
-                    "Vue",
-                    "Angular",
-                    "HTML5",
-                    "CSS3",
                     "Tailwind CSS",
                     "SASS",
-                  ].map((skill, index) => (
-                    <SkillCard key={skill} name={skill} delay={index * 100} />
+                  ].map((skill) => (
+                    <span
+                      key={skill}
+                      className="bg-zinc-800/80 text-zinc-200 px-3 py-1.5 rounded-full text-sm"
+                    >
+                      {skill}
+                    </span>
                   ))}
                 </div>
-              </TabsContent>
+              </div>
 
-              <TabsContent value="backend" className="mt-6">
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+              {/* Backend */}
+              <div className="bg-zinc-900/80 border border-zinc-800 rounded-xl p-6 hover:border-purple-500/50 transition-all">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="text-purple-400 p-2 bg-purple-400/10 rounded-lg">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="lucide lucide-server"
+                    >
+                      <rect width="20" height="8" x="2" y="2" rx="2" ry="2" />
+                      <rect width="20" height="8" x="2" y="14" rx="2" ry="2" />
+                      <line x1="6" x2="6" y1="6" y2="6" />
+                      <line x1="6" x2="6" y1="18" y2="18" />
+                    </svg>
+                  </div>
+                  <h3 className="text-xl font-semibold">Backend</h3>
+                </div>
+                <div className="flex flex-wrap gap-2">
                   {[
                     "Node.js",
-                    "Express",
-                    "Django",
-                    "Docker",
+                    "Express.js",
                     "Kafka",
+                    "Docker",
                     "GraphQL",
-                    "REST API",
+                    "REST APIs",
                     "Microservices",
-                  ].map((skill, index) => (
-                    <SkillCard key={skill} name={skill} delay={index * 100} />
+                  ].map((skill) => (
+                    <span
+                      key={skill}
+                      className="bg-zinc-800/80 text-zinc-200 px-3 py-1.5 rounded-full text-sm"
+                    >
+                      {skill}
+                    </span>
                   ))}
                 </div>
-              </TabsContent>
+              </div>
 
-              <TabsContent value="database" className="mt-6">
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+              {/* Databases */}
+              <div className="bg-zinc-900/80 border border-zinc-800 rounded-xl p-6 hover:border-purple-500/50 transition-all">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="text-purple-400 p-2 bg-purple-400/10 rounded-lg">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="lucide lucide-database"
+                    >
+                      <ellipse cx="12" cy="5" rx="9" ry="3" />
+                      <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3" />
+                      <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5" />
+                    </svg>
+                  </div>
+                  <h3 className="text-xl font-semibold">Databases</h3>
+                </div>
+                <div className="flex flex-wrap gap-2">
                   {[
-                    "PostgreSQL",
                     "MongoDB",
+                    "PostgreSQL",
                     "MySQL",
                     "Redis",
                     "Firebase",
                     "Supabase",
-                    "DynamoDB",
-                    "VectorDB",
-                  ].map((skill, index) => (
-                    <SkillCard key={skill} name={skill} delay={index * 100} />
+                    "Clickhouse",
+                  ].map((skill) => (
+                    <span
+                      key={skill}
+                      className="bg-zinc-800/80 text-zinc-200 px-3 py-1.5 rounded-full text-sm"
+                    >
+                      {skill}
+                    </span>
                   ))}
                 </div>
-              </TabsContent>
+              </div>
 
-              <TabsContent value="cloud" className="mt-6">
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+              {/* Cloud & DevOps */}
+              <div className="bg-zinc-900/80 border border-zinc-800 rounded-xl p-6 hover:border-purple-500/50 transition-all">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="text-purple-400 p-2 bg-purple-400/10 rounded-lg">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="lucide lucide-cloud"
+                    >
+                      <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z" />
+                    </svg>
+                  </div>
+                  <h3 className="text-xl font-semibold">Cloud & DevOps</h3>
+                </div>
+                <div className="flex flex-wrap gap-2">
                   {[
                     "AWS",
                     "Google Cloud",
                     "Azure",
-                    "Vercel",
-                    "Netlify",
                     "Docker",
                     "Kubernetes",
                     "CI/CD",
-                  ].map((skill, index) => (
-                    <SkillCard key={skill} name={skill} delay={index * 100} />
+                    "Vercel",
+                    "Netlify",
+                  ].map((skill) => (
+                    <span
+                      key={skill}
+                      className="bg-zinc-800/80 text-zinc-200 px-3 py-1.5 rounded-full text-sm"
+                    >
+                      {skill}
+                    </span>
                   ))}
                 </div>
-              </TabsContent>
-            </Tabs>
+              </div>
+
+              {/* Dev Tools */}
+              <div className="bg-zinc-900/80 border border-zinc-800 rounded-xl p-6 hover:border-purple-500/50 transition-all">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="text-purple-400 p-2 bg-purple-400/10 rounded-lg">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="lucide lucide-wrench"
+                    >
+                      <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
+                    </svg>
+                  </div>
+                  <h3 className="text-xl font-semibold">Dev Tools</h3>
+                </div>
+                <div className="flex flex-wrap gap-2">
+                  {[
+                    "Git",
+                    "GitHub",
+                    "VS Code",
+                    "Figma",
+                    "Postman",
+                    "Jest",
+                    "Webpack",
+                    "Vite",
+                  ].map((skill) => (
+                    <span
+                      key={skill}
+                      className="bg-zinc-800/80 text-zinc-200 px-3 py-1.5 rounded-full text-sm"
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              {/* Others */}
+              <div className="bg-zinc-900/80 border border-zinc-800 rounded-xl p-6 hover:border-purple-500/50 transition-all">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="text-purple-400 p-2 bg-purple-400/10 rounded-lg">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="lucide lucide-layers"
+                    >
+                      <path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z" />
+                      <path d="m22 12.7-9.04 4.1a2 2 0 0 1-1.92 0L2 12.7" />
+                      <path d="m22 17.7-9.04 4.1a2 2 0 0 1-1.92 0L2 17.7" />
+                    </svg>
+                  </div>
+                  <h3 className="text-xl font-semibold">Others</h3>
+                </div>
+                <div className="flex flex-wrap gap-2">
+                  {[
+                    "Socket.io",
+                    "JWT",
+                    "OAuth",
+                    "REST APIs",
+                    "WebSockets",
+                    "GraphQL",
+                    "Redux",
+                    "Zustand",
+                  ].map((skill) => (
+                    <span
+                      key={skill}
+                      className="bg-zinc-800/80 text-zinc-200 px-3 py-1.5 rounded-full text-sm"
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
           </div>
         </AnimatedSection>
 
@@ -615,18 +782,18 @@ export default function Portfolio() {
 }
 
 // Component for skill cards
-function SkillCard({ name, delay = 0 }) {
-  return (
-    <div
-      className="bg-zinc-800/50 rounded-lg p-4 flex items-center justify-center h-24 border border-zinc-700 hover:border-purple-500 transition-all hover:bg-zinc-800 group hover:-translate-y-1 hover:shadow-lg hover:shadow-purple-500/20"
-      style={{ transitionDelay: `${delay}ms` }}
-    >
-      <span className="text-lg font-medium group-hover:text-purple-400 transition-colors">
-        {name}
-      </span>
-    </div>
-  );
-}
+// function SkillCard({ name, delay = 0 }) {
+//   return (
+//     <div
+//       className="bg-zinc-800/50 rounded-lg p-4 flex items-center justify-center h-24 border border-zinc-700 hover:border-purple-500 transition-all hover:bg-zinc-800 group hover:-translate-y-1 hover:shadow-lg hover:shadow-purple-500/20"
+//       style={{ transitionDelay: `${delay}ms` }}
+//     >
+//       <span className="text-lg font-medium group-hover:text-purple-400 transition-colors">
+//         {name}
+//       </span>
+//     </div>
+//   );
+// }
 
 // Component for project cards
 function ProjectCard({
@@ -719,6 +886,18 @@ function CertificationCard({ title, organization, date, certificateLink }) {
   );
 }
 
+function SkillCard({ name, delay = 0 }) {
+  return (
+    <div
+      className="bg-zinc-800/50 rounded-lg p-4 flex items-center justify-center h-24 border border-zinc-700 hover:border-purple-500 transition-all hover:bg-zinc-800 group hover:-translate-y-1 hover:shadow-lg hover:shadow-purple-500/20"
+      style={{ transitionDelay: `${delay}ms` }}
+    >
+      <span className="text-lg font-medium group-hover:text-purple-400 transition-colors">
+        {name}
+      </span>
+    </div>
+  );
+}
 // Component for open source contribution cards
 function OpenSourceCard({
   project,
