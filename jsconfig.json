@@ -8,4 +8,5 @@
       "@styles/*": ["./src/styles/*"]
     }
   }
+
 }

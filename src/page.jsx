@@ -186,7 +186,7 @@ export default function Portfolio() {
               </div>
             </div>
             <div className="md:w-1/2 relative">
-              <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-purple-500 relative mx-auto brightness-[0.6]">
+              <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-purple-500 relative mx-auto brightness-[0.7]">
                 <img
                   src="/user.jpg?height=320&width=320"
                   alt="sujal"
