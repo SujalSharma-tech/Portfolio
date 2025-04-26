@@ -169,20 +169,6 @@ export default function Portfolio() {
                     <span className="sr-only">Email</span>
                   </Button>
                 </a>
-                <a
-                  href="https://instagram.com/sujal.dreamss"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <Button
-                    variant="outline"
-                    size="icon"
-                    className="rounded-full border-zinc-700 hover:border-purple-500 hover:bg-purple-500/10"
-                  >
-                    <Instagram className="h-5 w-5" />
-                    <span className="sr-only">Instagram</span>
-                  </Button>
-                </a>
               </div>
             </div>
             <div className="md:w-1/2 relative">
@@ -901,17 +887,6 @@ export default function Portfolio() {
                       rel="noreferrer"
                     >
                       linkedin.com/in/sujalsharma12
-                    </a>
-                  </div>
-                  <div className="flex items-center">
-                    <Instagram className="h-5 w-5 mr-3 text-purple-400" />
-                    <a
-                      href="https://instagram.com/sujal.dreamss"
-                      target="_blank"
-                      className="hover:text-purple-400 transition-colors"
-                      rel="noreferrer"
-                    >
-                      instagram.com/sujal.dreamss
                     </a>
                   </div>
                 </div>
